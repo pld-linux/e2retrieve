@@ -1,0 +1,50 @@
+Summary:	e2retrieve is a data recovery tool for Ext2 filesystem
+Name:		e2retrieve
+Version:	20031216
+Release:	0.1
+License:	GPL
+Group:		Applications/System
+Source0:	http://coredump.free.fr/linux/%{name}_%{version}.tar.gz
+# Source0-md5:	628de3e4c1e0c0f55b74ee5c5bd1cb67
+Patch0:		%{name}-lvmblkmajor.patch
+URL:		http://coredump.free.fr/linux/e2retrieve.php
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+%description
+e2retrieve is a data recovery tool for Ext2 filesystem. This means
+that e2retrieve will not try to repair the filesystem but will extract
+data to "copy" it to another place (another disk, NFS, Samba, ...).
+
+e2retrieve:
+
+- can recover data from a truncated or split ext2 filesystem (in the
+  case of a LVM with a disk that has crashed, for example), 
+- will not write onto the ext2 filesystem it is analysing, therefore
+  it will never increase damages previously caused,
+- recovers directories, directories tree, files, symbolic links
+  and special files with their access rights, owner and modification
+  date,
+- is fully written in C from scratch,
+- does not need any library,
+- can easily fit in a rescue floppy disk (in the case where you
+  do not have enough IDE slots),
+- is not an undeleting tool
+
+%prep
+%setup -q -n %{name}
+%patch0 -p1
+
+%build
+%{__make}
+
+%install
+rm -rf $RPM_BUILD_ROOT
+install -D %{name} $RPM_BUILD_ROOT/%{_bindir}/%{name}
+
+%clean
+rm -rf $RPM_BUILD_ROOT
+
+%files
+%defattr(644,root,root,755)
+%doc Changelog README TODO
+%attr(755,root,root) %{_bindir}/*
