@@ -1,0 +1,11 @@
+--- e2retrieve/src/core.c~	2003-07-29 17:19:26.000000000 +0000
++++ e2retrieve/src/core.c	2004-03-07 12:30:32.000000000 +0000
+@@ -35,6 +35,8 @@
+ #include <signal.h>
+ #include <getopt.h>
+ 
++#define LVM_BLK_MAJOR      58      /* Logical Volume Manager */
++
+ /*
+ Equivalent to <sys/mount.h>
+ #include <linux/fs.h>
