@@ -54,7 +54,10 @@ e2retrieve:
 %patch0 -p1
 
 %build
-%{__make}
+%{__make} \
+	CC="%{__cc}" \
+	CFLAGS_DIST="%{rpmcflags} -Wall" \
+	STRIP=true
 
 %install
 rm -rf $RPM_BUILD_ROOT
