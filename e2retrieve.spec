@@ -1,5 +1,5 @@
 Summary:	e2retrieve - a data recovery tool for ext2 filesystem
-Summary(pl.UTF-8):   e2retrieve - narzędzie do odzyskiwania danych z systemu plików ext2
+Summary(pl.UTF-8):	e2retrieve - narzędzie do odzyskiwania danych z systemu plików ext2
 Name:		e2retrieve
 Version:	20031216
 Release:	0.1
