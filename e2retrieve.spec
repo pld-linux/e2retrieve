@@ -1,5 +1,5 @@
 Summary:	e2retrieve - a data recovery tool for ext2 filesystem
-Summary(pl):	e2retrieve - narzêdzie do odzyskiwania danych z systemu plików ext2
+Summary(pl.UTF-8):   e2retrieve - narzÄ™dzie do odzyskiwania danych z systemu plikÃ³w ext2
 Name:		e2retrieve
 Version:	20031216
 Release:	0.1
@@ -29,25 +29,25 @@ e2retrieve:
   have enough IDE slots),
 - is not an undeleting tool.
 
-%description -l pl
-e2retrieve to narzêdzie do odzyskiwania danych z systemu plików ext2.
-Oznacza to, ¿e e2retrieve nie próbuje naprawiæ systemu plików, ale
-wyci±gn±æ dane, ¿eby skopiowaæ je w inne miejsce (inny dysk, NFS,
+%description -l pl.UTF-8
+e2retrieve to narzÄ™dzie do odzyskiwania danych z systemu plikÃ³w ext2.
+Oznacza to, Å¼e e2retrieve nie prÃ³buje naprawiÄ‡ systemu plikÃ³w, ale
+wyciÄ…gnÄ…Ä‡ dane, Å¼eby skopiowaÄ‡ je w inne miejsce (inny dysk, NFS,
 Samba...).
 
 e2retrieve:
-- mo¿e odzyskaæ dane z obciêtego lub podzielonego systemu plików ext2
+- moÅ¼e odzyskaÄ‡ dane z obciÄ™tego lub podzielonego systemu plikÃ³w ext2
   (np. w przypadku LVM z uszkodzonym dyskiem),
-- nie zapisuje na system plików ext2, który analizuje, wiêc nie
-  zwiêkszy rozmiaru uszkodzeñ,
-- odzyskuje katalogi, drzewa katalogów, pliki, dowi±zania symboliczne
-  oraz pliki specjalne z ich prawami dostêpu, w³a¶cicielem i dat±
+- nie zapisuje na system plikÃ³w ext2, ktÃ³ry analizuje, wiÄ™c nie
+  zwiÄ™kszy rozmiaru uszkodzeÅ„,
+- odzyskuje katalogi, drzewa katalogÃ³w, pliki, dowiÄ…zania symboliczne
+  oraz pliki specjalne z ich prawami dostÄ™pu, wÅ‚aÅ›cicielem i datÄ…
   modyfikacji,
-- jest napisane ca³kowicie od pocz±tku w C,
-- nie wymaga ¿adnej biblioteki,
-- mo¿e ³atwo zmie¶ciæ siê na dyskietce ratunkowej (w przypadku, kiedy
-  brak odpowiedniej liczby portów IDE),
-- nie jest narzêdziem do odkasowywania.
+- jest napisane caÅ‚kowicie od poczÄ…tku w C,
+- nie wymaga Å¼adnej biblioteki,
+- moÅ¼e Å‚atwo zmieÅ›ciÄ‡ siÄ™ na dyskietce ratunkowej (w przypadku, kiedy
+  brak odpowiedniej liczby portÃ³w IDE),
+- nie jest narzÄ™dziem do odkasowywania.
 
 %prep
 %setup -q -n %{name}
