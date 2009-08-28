@@ -1,14 +1,14 @@
 Summary:	e2retrieve - a data recovery tool for ext2 filesystem
 Summary(pl.UTF-8):	e2retrieve - narzędzie do odzyskiwania danych z systemu plików ext2
 Name:		e2retrieve
-Version:	20031216
+Version:	20070415
 Release:	0.1
 License:	GPL
 Group:		Applications/System
-Source0:	http://coredump.free.fr/linux/%{name}_%{version}.tar.gz
-# Source0-md5:	628de3e4c1e0c0f55b74ee5c5bd1cb67
+Source0:	http://www.guzu.net/files/%{name}_%{version}.tar.gz
+# Source0-md5:	aa1ab6ff535980fc936fe6c3252e0be9
 Patch0:		%{name}-lvmblkmajor.patch
-URL:		http://coredump.free.fr/linux/e2retrieve.php
+URL:		http://www.guzu.net/linux/e2retrieve.php
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
