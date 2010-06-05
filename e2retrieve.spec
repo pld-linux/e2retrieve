@@ -9,6 +9,7 @@ Source0:	http://www.guzu.net/files/%{name}_%{version}.tar.gz
 # Source0-md5:	aa1ab6ff535980fc936fe6c3252e0be9
 Patch0:		%{name}-lvmblkmajor.patch
 URL:		http://www.guzu.net/linux/e2retrieve.php
+BuildRequires:	e2fsprogs-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -18,7 +19,7 @@ data to "copy" it to another place (another disk, NFS, Samba, ...).
 
 e2retrieve:
 - can recover data from a truncated or split ext2 filesystem (in the
-  case of a LVM with a disk that has crashed, for example), 
+  case of a LVM with a disk that has crashed, for example),
 - will not write onto the ext2 filesystem it is analysing, therefore
   it will never increase damages previously caused,
 - recovers directories, directories tree, files, symbolic links and
