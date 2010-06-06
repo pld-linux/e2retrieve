@@ -8,6 +8,7 @@ Group:		Applications/System
 Source0:	http://www.guzu.net/files/%{name}_%{version}.tar.gz
 # Source0-md5:	aa1ab6ff535980fc936fe6c3252e0be9
 Patch0:		%{name}-lvmblkmajor.patch
+Patch1:		%{name}-reg_eip.patch
 URL:		http://www.guzu.net/linux/e2retrieve.php
 BuildRequires:	e2fsprogs-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -53,6 +54,7 @@ e2retrieve:
 %prep
 %setup -q -n %{name}
 %patch0 -p1
+%patch1 -p1
 
 %build
 %{__make} \
